@@ -1,4 +1,6 @@
 package org.dakardrop.inventory.entity;
 
-public class MovementType {
+public enum MovementType {
+    IN,
+    OUT
 }
