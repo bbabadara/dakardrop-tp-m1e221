@@ -18,7 +18,7 @@ public record Money(BigDecimal amount, String currency) {
 
     public Money add(Money other) {
         if (!this.currency.equalsIgnoreCase(other.currency)) {
-            throw new IllegalArgumentException("Opération impossible : devises incompatibles ("
+            throw new CurrencyMismatchException("Opération impossible : devises incompatibles ("
                     + this.currency + " vs " + other.currency + ").");
         }
         return new Money(this.amount.add(other.amount), this.currency);
